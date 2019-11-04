@@ -34,7 +34,36 @@
   * @import "components/buttons";
   * @import "components/forms";
   */
+  
+  .btn-primary{
+    @apply 
+      bg-blue-700 
+      text-white 
+      px-6 
+      py-4 
+      uppercase 
+      rounded 
+      mb-4 
+      tracking-wider 
+      font-semibold;
+  }
 
+  .btn-secondary{
+    @apply 
+      bg-white 
+      border 
+      px-6 
+      py-4 
+      rounded 
+      uppercase
+      tracking-wider
+  } 
+
+  @screen md{
+    .btn-primary{ 
+      @apply mr-4 mb-0
+    }
+  }
 
   /**
   * This injects all of Tailwind's utility classes, generated based on your
