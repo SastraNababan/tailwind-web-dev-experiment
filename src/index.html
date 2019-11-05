@@ -6,27 +6,117 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
   <title>Tailwind Starter</title>
-  <style>
-  .logo{
-    height: 30px;
-    width: 125px;
-  }
-  </style>
+  <script>
+    function showMenu() {
+      document.getElementById("side-nav").setAttribute("style", "opacity:1;");
+      document.getElementById("side-nav").classList.remove('invisible');
+    }
+    function hideMenu() {
+      // if (document.getElementById("side-nav").classList.contains('invisible')){
+      document.getElementById("side-nav").classList.add('invisible')
+      // }
+    }
+
+  </script>
 </head>
 <body>
+
+  <header>
   <!-- Desktop Navigation -->
-  <!-- Mobile Navigation -->
-  <!-- Banner -->
-  <div class="bg-gray-100">
-    <header class="container mx-auto py-16 px-6">
-      <h1 class="text-4xl leading-tight pb-6">Let's build the future of the web</h1>
-      <h3 class="text-1xl font-light pb-6">Get the web's modern capabilities on your own sites and apps with useful guidance and analysis from web.dev.</h3>
-      <div class="flex flex-col md:flex-row">
-        <button class="btn-primary"> Test My Site</button>
-        <button class="btn-secondary"> Explore Topics</button>
+    <nav class="absolute shadow bg-white w-full bg-white flex p-4 px-6 items-center">
+      <div class="w-1/2 md:w-1/6">
+        <div class="flex">
+          <button class=" md:hidden btn-humbergur pr-4" onclick="showMenu()">
+            <img src="https://img.icons8.com/android/24/000000/menu.png">
+          </button>
+          <a href="">
+            <img src="lockup.svg" class="logo" />
+          </a>
+        </div>
       </div>
-    </header>
-  </div>
+  
+      <div class="hidden md:block md w-2/6">
+        <ul class="flex">
+          <li class="pr-8 text-gray-700"><a href="#">Learn</a></li>
+          <li class="pr-8 text-gray-700"><a href="#">Measure</a></li>
+          <li class="pr-8 text-gray-700"><a href="#">Blog</a></li>
+          <li class="pr-8 text-gray-700"><a href="#">About</a></li>
+        </ul>
+      </div>
+  
+      <div class="w-1/2 text-right md:w-3/6">
+        <div class="flex flex-row items-center justify-end">
+          <button class="mr-4 md:hidden">
+            <svg version="1.1" class="h-4 text-dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px" y="0px" viewBox="0 0 52.966 52.966" style="enable-background:new 0 0 52.966 52.966;" xml:space="preserve">
+              <path d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
+                              c5.083,0,9.748-1.817,13.384-4.832l14.895,15.491c0.196,0.205,0.458,0.307,0.721,0.307c0.25,0,0.499-0.093,0.693-0.279
+                              C52.074,52.304,52.086,51.671,51.704,51.273z M21.983,40c-10.477,0-19-8.523-19-19s8.523-19,19-19s19,8.523,19,19
+                              S32.459,40,21.983,40z" />
+            </svg>
+          </button>
+          <div class="hidden md:block">
+            <div class="relative mr-6 my-2">
+              <input type="search" class="bg-gray-200 p-2 pl-8" placeholder="Search">
+              <div class="icon-search">
+                <svg version="1.1" class="h-4 text-dark" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 52.966 52.966"
+                  style="enable-background:new 0 0 52.966 52.966;" xml:space="preserve">
+                  <path d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
+                    c5.083,0,9.748-1.817,13.384-4.832l14.895,15.491c0.196,0.205,0.458,0.307,0.721,0.307c0.25,0,0.499-0.093,0.693-0.279
+                    C52.074,52.304,52.086,51.671,51.704,51.273z M21.983,40c-10.477,0-19-8.523-19-19s8.523-19,19-19s19,8.523,19,19
+                    S32.459,40,21.983,40z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <a class="uppercase text-sm" href="#">Sign in</a>
+        </div>
+      </div>
+    </nav>
+  
+  <!-- Mobile Navigation -->
+    <nav
+      class="flex flex-col shadow-md absolute bg-white h-full w-64 invisible" id="side-nav">
+      <div class="flex flex-row py-4">
+        <button class="px-4 text-gray-600" onclick="hideMenu()"> X </button>
+        <a href="">
+          <img src="lockup.svg" class="logo" />
+        </a>
+      </div>
+      <div class="w-fullx">
+        <ul>
+          <li class="border-b border-t mt-4x pl-4 py-4 text-gray-600"><a href="#">Learn</a></li>
+          <li class="border-b pl-4 py-4 text-gray-600"><a href="#">Measure</a></li>
+          <li class="border-b pl-4 py-4 text-gray-600"><a href="#">Blog</a></li>
+          <li class="border-b pl-4 py-4 text-gray-600"><a href="#">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+
+  <!-- Banner -->
+  <section class="banner">
+  <div class="bg-gray-100x container mx-auto py-16 px-6 pt-24 flex">
+    <!-- <header class="container mx-auto py-16 px-6"> -->
+      <div class="max-w-sm">
+        <h1 class="text-4xl leading-tight pb-6">Let's build the future of the web</h1>
+        <h3 class="text-1xl font-light pb-6">Get the web's modern capabilities on your own sites and apps with useful guidance and analysis from web.dev.</h3>
+        <div class="flex flex-col md:flex-row">
+          <button class="btn-primary"> Test My Site</button>
+          <button class="btn-secondary"> Explore Topics</button>
+        </div>
+      </div>
+      <!-- <div class="w-1/2"></div> -->
+
+    <!-- </header> -->
+    </div>
+  </section>
+
+  </main>
 
 </body>
 </html>

@@ -58,11 +58,33 @@
       uppercase
       tracking-wider
   } 
+  .banner{
+    background: #f8f9fa;
+    background-image:url('../future_web.svg');
+    background-position: left 50% top -215px;
+    background-repeat: no-repeat;
+    background-size: 400px;
+    padding: 72px 24px;
+  }
 
+  .logo{
+    height: 30px;
+    width: 125px;
+  }
+  .icon-search{
+    @apply absolute mt-3 mr-4;
+    left:10px;
+    top:1px;
+  }
   @screen md{
     .btn-primary{ 
       @apply mr-4 mb-0
     }
+    .banner{
+      background-position: left 430px top 50%;
+      background-size: 650px;
+    }
+
   }
 
   /**
